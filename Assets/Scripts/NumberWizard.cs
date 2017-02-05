@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NumberWizard : MonoBehaviour {
-    int min = 1;
-    int max = 1001;
-    int guess = 500;
+    int min;
+    int max;
+    int guess;
     // Use this for initialization
     void Start () {
         StarGame();
@@ -13,6 +13,9 @@ public class NumberWizard : MonoBehaviour {
 
 	void StarGame()
     {
+        min = 1;
+        max = 1001;
+        guess = 500;
         print("Welcome to Number Wizard");
         print("Pick a number in your head and don't tell me:");
 
@@ -47,6 +50,7 @@ public class NumberWizard : MonoBehaviour {
         else if (Input.GetKeyDown(KeyCode.Return))
         {
             print("I won!");
+            StarGame();
         }
     }
 }
